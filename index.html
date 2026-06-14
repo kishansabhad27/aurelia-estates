@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurelia Estates | Find Your Dream Luxury Property</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Aurelia Estates is a premier luxury real estate agency helping you find your dream villa, penthouse, or estate in Miami and the French Riviera. Discover premium listings.">
+  <meta name="keywords" content="luxury real estate, Miami mansions, villas French Riviera, penthouses for sale, rent property, Aurelia Estates">
+  <meta name="author" content="Aurelia Estates">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.aureliaestates.com/">
+  <meta property="og:title" content="Aurelia Estates | Find Your Dream Luxury Property">
+  <meta property="og:description" content="Explore and buy premium curated estates, penthouses, and modernist villas. Your dream property awaits.">
+  <meta property="og:image" content="assets/images/hero_background.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.aureliaestates.com/">
+  <meta property="twitter:title" content="Aurelia Estates | Find Your Dream Luxury Property">
+  <meta property="twitter:description" content="Explore and buy premium curated estates, penthouses, and modernist villas. Your dream property awaits.">
+  <meta property="twitter:image" content="assets/images/hero_background.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/agent_1.png">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Local Business Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Aurelia Estates",
+    "image": "assets/images/hero_background.png",
+    "telephone": "+1 (305) 555-0199",
+    "email": "contact@aureliaestates.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "800 Brickell Avenue, Suite 1200",
+      "addressLocality": "Miami",
+      "addressRegion": "FL",
+      "postalCode": "33131",
+      "addressCountry": "US"
+    },
+    "url": "https://www.aureliaestates.com",
+    "priceRange": "$$$$"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ==========================================
+       LOADER SCREEN
+       ========================================== -->
+  <div id="loader">
+    <div class="loader-spinner"></div>
+    <div class="loader-logo">AE</div>
+  </div>
+
+  <!-- ==========================================
+       NAVIGATION BAR
+       ========================================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#" id="navbar-brand-logo">
+        <i class="fas fa-gem text-gold"></i> AURELIA <span>ESTATES</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#featured-properties">Properties</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center gap-3">
+          <!-- Dark Mode Toggle -->
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+            <i class="fas fa-moon"></i>
+          </button>
+          <!-- Compare Trigger Badge -->
+          <button id="compare-trigger-btn" class="compare-badge-btn" aria-label="Open Property Comparison">
+            <i class="fas fa-balance-scale"></i>
+            <span class="compare-count-badge compare-count">0</span>
+          </button>
+          <!-- Contact CTAs -->
+          <a href="#contact" class="btn btn-gold btn-sm d-none d-sm-inline-block">Inquire Now</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       HERO SECTION WITH PROPERTY SEARCH
+       ========================================== -->
+  <header id="hero-header" class="hero-section" style="background-image: url('assets/images/hero_background.png');">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content text-center text-lg-start">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-6 mb-5 mb-lg-0 text-white">
+          <h1 class="hero-title fade-up" id="hero-title">Find Your <span>Dream</span> Property</h1>
+          <p class="hero-subtitle fade-up stagger-1" id="hero-subtitle">Discover our exclusive portfolio of ultra-luxury modernist villas, private penthouses, and breathtaking oceanfront estates curated for sophisticated living.</p>
+          <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 fade-up stagger-2">
+            <a href="#featured-properties" class="btn btn-gold">View Properties</a>
+            <a href="#contact" class="btn btn-outline-gold text-white">Contact Agent</a>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 fade-up stagger-3">
+          <div class="search-container text-start">
+            <h3 class="text-white mb-4 font-heading" style="font-size: 1.6rem;"><i class="fas fa-search text-gold me-2"></i> Advanced Property Search</h3>
+            <form id="hero-search-form">
+              <div class="row">
+                <div class="col-12 mb-3">
+                  <label for="search-keyword"><i class="fas fa-map-marker-alt text-gold"></i> Location / City</label>
+                  <input type="text" id="search-keyword" class="form-control" placeholder="e.g. Miami, Brickell, Riviera">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="search-type"><i class="fas fa-building text-gold"></i> Property Type</label>
+                  <select id="search-type" class="form-select">
+                    <option value="all">All Types</option>
+                    <option value="luxury homes">Luxury Homes</option>
+                    <option value="residential">Residential</option>
+                    <option value="commercial">Commercial</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="search-price"><i class="fas fa-tag text-gold"></i> Price Range</label>
+                  <select id="search-price" class="form-select">
+                    <option value="all">Any Price</option>
+                    <option value="under-500k">Under ₹500k</option>
+                    <option value="500k-1m">₹500k - ₹1M</option>
+                    <option value="1m-5m">₹1M - ₹5M</option>
+                    <option value="over-5m">Over ₹5M</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <label for="search-beds"><i class="fas fa-bed text-gold"></i> Bedrooms</label>
+                  <select id="search-beds" class="form-select">
+                    <option value="all">Any</option>
+                    <option value="3">3 Beds</option>
+                    <option value="4">4+ Beds</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <label for="search-baths"><i class="fas fa-bath text-gold"></i> Bathrooms</label>
+                  <select id="search-baths" class="form-select">
+                    <option value="all">Any</option>
+                    <option value="2">2 Baths</option>
+                    <option value="3">3+ Baths</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <button type="submit" id="hero-search-btn" class="btn btn-gold w-100 py-3"><i class="fas fa-filter me-2"></i> Search Listings</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       ABOUT US SECTION WITH DYNAMIC STATS
+       ========================================== -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="about-image-wrapper pe-lg-4 fade-up">
+            <img id="about-img" src="assets/images/hero_background.png" alt="Aurelia Villa Exterior" class="img-fluid rounded shadow-lg" style="height: 450px; width: 100%; object-fit: cover;">
+            <div class="about-image-experience">
+              <div class="years" id="about-exp-years">15+</div>
+              <span>Years of<br>Excellence</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="section-title text-start mb-4 fade-up">
+            <span id="about-pre-title" class="text-gold fw-bold text-uppercase" style="letter-spacing: 0.1em; font-size: 0.9rem;">About Our Agency</span>
+            <h2 id="about-title" class="mt-2">Defining Luxury Living in the Luxury Market</h2>
+            <div class="divider ms-0"></div>
+          </div>
+          <p id="about-lead" class="lead fade-up stagger-1" style="line-height: 1.8;">At Aurelia Estates, we specialize in high-end residential, private estates, and luxury investments across primary global hubs.</p>
+          <p id="about-desc" class="text-secondary fade-up stagger-2" style="line-height: 1.8; margin-bottom: 2rem;">Our mission is to bring bespoke architectural marvels to discerning buyers. With a legacy of luxury advisory, we merge expert negotiations, exclusive off-market listings, and white-glove real estate marketing services under one roof.</p>
+          
+          <div class="row g-4 mt-2">
+            <div class="col-sm-4 scale-up stagger-1">
+              <div class="stat-card">
+                <div class="stat-number"><span class="counter-val" id="about-stat-1-val" data-target="1250">0</span>+</div>
+                <div class="stat-label" id="about-stat-1-label">Properties Sold</div>
+              </div>
+            </div>
+            <div class="col-sm-4 scale-up stagger-2">
+              <div class="stat-card">
+                <div class="stat-number"><span class="counter-val" id="about-stat-2-val" data-target="950">0</span>+</div>
+                <div class="stat-label" id="about-stat-2-label">Happy Clients</div>
+              </div>
+            </div>
+            <div class="col-sm-4 scale-up stagger-3">
+              <div class="stat-card">
+                <div class="stat-number"><span class="counter-val" id="about-stat-3-val" data-target="15">0</span>+</div>
+                <div class="stat-label" id="about-stat-3-label">Years Experience</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FEATURED PROPERTIES SECTION
+       ========================================== -->
+  <section id="featured-properties" class="section-padding bg-light-custom" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-title text-center fade-up">
+        <span id="prop-section-pre-title" class="text-gold fw-bold text-uppercase" style="letter-spacing: 0.1em; font-size: 0.9rem;">Featured Properties</span>
+        <h2 id="prop-section-title" class="mt-2">Our Exclusive Listings</h2>
+        <p id="prop-section-subtitle" class="mt-2">Browse our hand-selected selection of prime luxury properties available for acquisition and lease.</p>
+        <div class="divider"></div>
+      </div>
+      
+      <!-- Filter Tabs -->
+      <div class="filter-tabs fade-up stagger-1">
+        <button class="filter-tab active" data-filter="all">All Properties</button>
+        <button class="filter-tab" data-filter="buy">For Sale</button>
+        <button class="filter-tab" data-filter="rent">For Rent</button>
+        <button class="filter-tab" data-filter="commercial">Commercial</button>
+        <button class="filter-tab" data-filter="luxury">Luxury Homes</button>
+      </div>
+      
+      <!-- Properties Grid -->
+      <div id="properties-grid" class="row">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ==========================================
+       SERVICES SECTION
+       ========================================== -->
+  <section id="services" class="section-padding bg-light-custom" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-title text-center fade-up">
+        <span id="services-pre-title" class="text-gold fw-bold text-uppercase" style="letter-spacing: 0.1em; font-size: 0.9rem;">What We Offer</span>
+        <h2 id="services-title" class="mt-2">Our Real Estate Services</h2>
+        <p id="services-subtitle" class="mt-2">Providing unparalleled white-glove services to buyers, sellers, and property investors globally.</p>
+        <div class="divider"></div>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-md-4 fade-up stagger-1">
+          <div class="service-card">
+            <div class="service-icon-wrapper">
+              <i class="fas fa-key" id="service-1-icon"></i>
+            </div>
+            <h3 class="font-heading mb-3" id="service-1-title">Property Buying</h3>
+            <p class="text-secondary" id="service-1-desc">Exclusive access to premier curated listings, off-market opportunities, and comprehensive neighborhood inspections.</p>
+          </div>
+        </div>
+        <div class="col-md-4 fade-up stagger-2">
+          <div class="service-card">
+            <div class="service-icon-wrapper">
+              <i class="fas fa-hand-holding-usd" id="service-2-icon"></i>
+            </div>
+            <h3 class="font-heading mb-3" id="service-2-title">Property Selling</h3>
+            <p class="text-secondary" id="service-2-desc">Luxury staging, 3D interactive virtual tours, high-impact marketing campaigns, and global outreach channels.</p>
+          </div>
+        </div>
+        <div class="col-md-4 fade-up stagger-3">
+          <div class="service-card">
+            <div class="service-icon-wrapper">
+              <i class="fas fa-tasks" id="service-3-icon"></i>
+            </div>
+            <h3 class="font-heading mb-3" id="service-3-title">Property Management</h3>
+            <p class="text-secondary" id="service-3-desc">Full-service tenant management, maintenance, billing, legal compliance, and regular property appraisals.</p>
+          </div>
+        </div>
+        <div class="col-md-4 fade-up stagger-4">
+          <div class="service-card">
+            <div class="service-icon-wrapper">
+              <i class="fas fa-chart-line" id="service-4-icon"></i>
+            </div>
+            <h3 class="font-heading mb-3" id="service-4-title">Investment Consulting</h3>
+            <p class="text-secondary" id="service-4-desc">Tailored reports, financial profiling, market trend analyses, capital gain forecasting, and local tax advice.</p>
+          </div>
+        </div>
+        <div class="col-md-4 fade-up stagger-5">
+          <div class="service-card">
+            <div class="service-icon-wrapper">
+              <i class="fas fa-file-invoice-dollar" id="service-5-icon"></i>
+            </div>
+            <h3 class="font-heading mb-3" id="service-5-title">Mortgage Assistance</h3>
+            <p class="text-secondary" id="service-5-desc">Connections with institutional lenders, loan package compilation support, and customized interest negotiations.</p>
+          </div>
+        </div>
+        <div class="col-md-4 fade-up stagger-6">
+          <div class="service-card">
+            <div class="service-icon-wrapper">
+              <i class="fas fa-shield-alt" id="service-6-icon"></i>
+            </div>
+            <h3 class="font-heading mb-3" id="service-6-title">Legal & Advisory</h3>
+            <p class="text-secondary" id="service-6-desc">Escrow mediation, title verification audits, real estate transfer contract checks, and high-stakes legal consulting.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       WHY CHOOSE US SECTION
+       ========================================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="section-title text-start mb-4 fade-up">
+            <span id="why-pre-title" class="text-gold fw-bold text-uppercase" style="letter-spacing: 0.1em; font-size: 0.9rem;">Why Choose Us</span>
+            <h2 id="why-title" class="mt-2">Redefining Property Acquisition</h2>
+            <div class="divider ms-0"></div>
+          </div>
+          <p id="why-desc" class="text-secondary mb-4 fade-up stagger-1">We elevate the home buying and selling process by offering direct concierge services, unparalleled transparency, and direct communication.</p>
+          
+          <div class="why-card fade-up stagger-2">
+            <div class="why-icon"><i class="fas fa-user-shield" id="why-card-1-icon"></i></div>
+            <div>
+              <h4 class="why-title" id="why-card-1-title">Trusted & Verified Agents</h4>
+              <p class="text-secondary mb-0" id="why-card-1-desc">Our professional agents are fully licensed, vetted, and rank in the top percentile of luxury transactions.</p>
+            </div>
+          </div>
+          <div class="why-card fade-up stagger-3">
+            <div class="why-icon"><i class="fas fa-clipboard-check" id="why-card-2-icon"></i></div>
+            <div>
+              <h4 class="why-title" id="why-card-2-title">100% Verified Listings</h4>
+              <p class="text-secondary mb-0" id="why-card-2-desc">We authenticate property deeds, building structural codes, and interior layouts before adding properties.</p>
+            </div>
+          </div>
+          <div class="why-card fade-up stagger-4">
+            <div class="why-icon"><i class="fas fa-percentage" id="why-card-3-icon"></i></div>
+            <div>
+              <h4 class="why-title" id="why-card-3-title">Best Market Appraisals</h4>
+              <p class="text-secondary mb-0" id="why-card-3-desc">We pull accurate MLS historic charts to guarantee your investment lines up with historical yields.</p>
+            </div>
+          </div>
+          <div class="why-card fade-up stagger-5">
+            <div class="why-icon"><i class="fas fa-headset" id="why-card-4-icon"></i></div>
+            <div>
+              <h4 class="why-title" id="why-card-4-title">24/7 Concierge Support</h4>
+              <p class="text-secondary mb-0" id="why-card-4-desc">Speak directly to an agent or coordinate dynamic showings round-the-clock, including virtual site reviews.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 fade-up">
+          <div class="position-relative">
+            <img id="why-img" src="assets/images/hero_background.png" alt="Luxury Interior Living Room" class="img-fluid rounded shadow-lg" style="height: 480px; width: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       TESTIMONIALS SECTION
+       ========================================== -->
+  <section id="testimonials-section" class="section-padding">
+    <div class="container">
+      <div class="section-title text-center fade-up">
+        <span id="test-section-pre-title" class="text-gold fw-bold text-uppercase" style="letter-spacing: 0.1em; font-size: 0.9rem;">Testimonials</span>
+        <h2 id="test-section-title" class="mt-2">What Our Clients Say</h2>
+        <p id="test-section-subtitle" class="mt-2">Read honest reviews from home buyers and premium investors.</p>
+        <div class="divider"></div>
+      </div>
+      
+      <div id="testimonialCarousel" class="carousel slide testimonial-carousel fade-up stagger-1" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="testimonial-card">
+              <div class="testimonial-quote-icon"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text" id="test-1-text">"Working with Aurelia Estates was an absolute dream. Their team secured a stunning modernist oceanfront penthouse for our family off-market. Their attention to detail, negotiation skills, and discretion were unmatched."</p>
+              <img id="test-1-img" src="assets/images/agent_1.png" alt="Client Headshot" class="testimonial-client-img">
+              <h4 class="testimonial-client-name" id="test-1-name">Eleanor Vance</h4>
+              <div class="testimonial-rating" id="test-1-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          
+          <div class="carousel-item">
+            <div class="testimonial-card">
+              <div class="testimonial-quote-icon"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text" id="test-2-text">"We utilized their commercial advisory to expand our firm's footprint. They analyzed MLS historic transaction indexes and secured our headquarters below appraisal values. Professionalism at its finest!"</p>
+              <img id="test-2-img" src="assets/images/agent_2.png" alt="Client Headshot" class="testimonial-client-img">
+              <h4 class="testimonial-client-name" id="test-2-name">Dr. Jameson Stark</h4>
+              <div class="testimonial-rating" id="test-2-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ==========================================
+       FAQ SECTION (ACCORDION)
+       ========================================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-title text-center fade-up">
+        <span id="faq-section-pre-title" class="text-gold fw-bold text-uppercase" style="letter-spacing: 0.1em; font-size: 0.9rem;">FAQ</span>
+        <h2 id="faq-section-title" class="mt-2">Frequently Asked Questions</h2>
+        <p id="faq-section-subtitle" class="mt-2">Find instant answers to common questions about luxury property acquisition.</p>
+        <div class="divider"></div>
+      </div>
+      
+      <div class="row fade-up stagger-1">
+        <div class="col-lg-8 mx-auto">
+          <div class="accordion" id="faqAccordion">
+            <!-- Item 1 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faq-heading-1">
+                <button id="faq-1-q" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-1" aria-expanded="true" aria-controls="faq-collapse-1">
+                  What documents do international buyers need to close on a luxury estate?
+                </button>
+              </h3>
+              <div id="faq-collapse-1" class="accordion-collapse collapse show" aria-labelledby="faq-heading-1" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" id="faq-1-a">
+                  International buyers typically need a valid passport, proof of funds (bank statements or institutional guarantee letters), tax identification filings, and custom entity incorporation paperwork if buying under LLCs. Our legal specialists facilitate full processing.
+                </div>
+              </div>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faq-heading-2">
+                <button id="faq-2-q" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-2" aria-expanded="false" aria-controls="faq-collapse-2">
+                  What is a title audit and title verification process?
+                </button>
+              </h3>
+              <div id="faq-collapse-2" class="accordion-collapse collapse" aria-labelledby="faq-heading-2" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" id="faq-2-a">
+                  A title audit involves examining historically registered deeds, property tax files, boundary surveys, and mortgage liens to confirm the seller holds 100% legal power to transfer the asset. This guarantees that your investment remains immune to third-party claims.
+                </div>
+              </div>
+            </div>
+            
+            <!-- Item 3 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faq-heading-3">
+                <button id="faq-3-q" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-3" aria-expanded="false" aria-controls="faq-collapse-3">
+                  Are off-market listings available for review?
+                </button>
+              </h3>
+              <div id="faq-collapse-3" class="accordion-collapse collapse" aria-labelledby="faq-heading-3" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" id="faq-3-a">
+                  Yes, a significant percent of our luxury portfolio is managed off-market due to seller privacy concerns. Please schedule an introductory call with Aurelia Sterling or Marcus Vane to access these exclusive estates.
+                </div>
+              </div>
+            </div>
+            
+            <!-- Item 4 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faq-heading-4">
+                <button id="faq-4-q" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-4" aria-expanded="false" aria-controls="faq-collapse-4">
+                  How does the mortgage pre-approval advisory work?
+                </button>
+              </h3>
+              <div id="faq-collapse-4" class="accordion-collapse collapse" aria-labelledby="faq-heading-4" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" id="faq-4-a">
+                  Our team packages your tax logs, credit indexes, and banking statement portfolios, directly presenting them to institutional lenders we work with to secure lower fixed interest rates.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CONTACT SECTION (FORM & DETAILS)
+       ========================================== -->
+  <section id="contact" class="section-padding bg-light-custom" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-title text-center fade-up">
+        <span id="contact-section-pre-title" class="text-gold fw-bold text-uppercase" style="letter-spacing: 0.1em; font-size: 0.9rem;">Get In Touch</span>
+        <h2 id="contact-section-title" class="mt-2">Contact Our Private Desk</h2>
+        <p id="contact-section-subtitle" class="mt-2">Reach out to request brochures, schedule viewings, or consult on a luxury listing.</p>
+        <div class="divider"></div>
+      </div>
+      
+      <div class="row g-4">
+        <!-- Contact Details -->
+        <div class="col-lg-5 fade-up stagger-1">
+          <div class="card p-4 border-0 h-100" style="background-color: var(--bg-card); border: 1px solid var(--border-color) !important;">
+            <h4 class="mb-4 font-heading text-gold">Office Headquarters</h4>
+            <ul class="contact-info-list">
+              <li>
+                <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <h5 class="mb-1 fw-bold">Office Address</h5>
+                  <p class="text-secondary mb-0" id="contact-address">800 Brickell Avenue, Suite 1200, Miami, FL 33131, United States</p>
+                </div>
+              </li>
+              <li>
+                <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                <div>
+                  <h5 class="mb-1 fw-bold">Phone Desk</h5>
+                  <p class="text-secondary mb-0" id="contact-phone">+1 (305) 555-0199</p>
+                </div>
+              </li>
+              <li>
+                <div class="icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <h5 class="mb-1 fw-bold">Email Desk</h5>
+                  <p class="text-secondary mb-0" id="contact-email">contact@aureliaestates.com</p>
+                </div>
+              </li>
+            </ul>
+            
+            <hr class="my-4">
+            
+            <h5 class="mb-3 font-heading">Instant Connectivity</h5>
+            <div class="d-flex flex-wrap gap-3">
+              <!-- WhatsApp Button -->
+              <a id="contact-whatsapp-btn" href="https://wa.me/13055550199" target="_blank" class="btn btn-whatsapp w-100 text-center justify-content-center">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+              </a>
+            </div>
+            
+            <!-- Map Container -->
+            <div class="map-container mt-4">
+              <!-- Google Maps Iframe Embed -->
+              <iframe 
+                id="contact-map-iframe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.1895689408643!2d-80.19326162382449!3d25.76431997735398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b69e46a78225%3A0xe54d92eeeb41b777!2s800%20Brickell%20Ave%2C%20Miami%2C%20FL%2033131!5e0!3m2!1sen!2sus!4v1717800000000!5m2!1sen!2sus" 
+                width="100%" 
+                height="180" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Aurelia Estates Miami Headquarters">
+              </iframe>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <div class="col-lg-7 fade-up stagger-2">
+          <form id="siteContactForm" class="contact-form h-100">
+            <h4 class="mb-4 font-heading"><i class="fas fa-envelope-open-text text-gold me-2"></i> Inquiry Form</h4>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="contact-name" class="form-label">Full Name</label>
+                <input type="text" id="contact-name" class="form-control" placeholder="John Doe" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="contact-email" class="form-label">Email Address</label>
+                <input type="email" id="contact-email" class="form-control" placeholder="john@example.com" required>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="contact-subject" class="form-label">Subject</label>
+                <input type="text" id="contact-subject" class="form-control" placeholder="e.g. Schedule Showing - The Azure Penthouse" required>
+              </div>
+              <div class="col-12 mb-4">
+                <label for="contact-message" class="form-label">Your Message</label>
+                <textarea id="contact-message" class="form-control" rows="5" placeholder="State your investment portfolio requests, timeframe, and background..." required></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-gold w-100 py-3">Submit Inquiry</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Logo and About -->
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <a class="footer-logo" href="#" id="footer-brand-logo">
+            <i class="fas fa-gem text-gold"></i> AURELIA <span>ESTATES</span>
+          </a>
+          <p class="footer-desc" id="footer-desc">Curating world-class luxury residences, cliffside estates, and penthouses. Offering certified titles, transparent transactions, and premier mortgage consultation advisory.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Aurelia Estates Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Aurelia Estates Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Aurelia Estates Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Aurelia Estates LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="col-md-4 col-sm-6 mb-4 mb-sm-0 text-lg-center">
+          <h4 class="footer-title d-inline-block">Quick Links</h4>
+          <ul class="footer-links list-unstyled">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About Agency</a></li>
+            <li><a href="#featured-properties">Curated Properties</a></li>
+            <li><a href="#services">Our Services</a></li>
+
+          </ul>
+        </div>
+        
+        <!-- Newsletter Signup -->
+        <div class="col-lg-4 col-sm-6">
+          <h4 class="footer-title" id="footer-newsletter-title">Aurelia Insights Newsletter</h4>
+          <p class="footer-desc" id="footer-newsletter-desc">Subscribe to get seasonal property catalogs, market updates, and off-market announcements.</p>
+          <form id="newsletterForm" class="newsletter-form">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Email Address" aria-label="Email Address" required>
+              <button class="btn btn-gold" type="submit">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div class="footer-bottom text-center">
+        <p>&copy; 2026 Aurelia Estates. All rights reserved. Designed with luxury in mind. Privacy Policy | Terms of Service | <a href="#" onclick="openAdminDesk(event)" class="text-gold"><i class="fas fa-user-cog"></i> Admin Desk</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       MODALS & WIDGETS
+       ========================================== -->
+
+  <!-- Property Detail Modal -->
+  <div class="modal fade" id="propertyDetailModal" tabindex="-1" aria-labelledby="propertyDetailModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title font-heading" id="propertyDetailModalLabel">Property Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Comparison Modal -->
+  <div class="modal fade" id="comparisonModal" tabindex="-1" aria-labelledby="comparisonModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title font-heading" id="comparisonModalLabel"><i class="fas fa-balance-scale text-gold me-2"></i> Side-by-Side Comparison</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="table-responsive">
+            <table class="table table-bordered compare-modal-table mb-0">
+              <thead>
+                <tr id="comparison-headers">
+                  <!-- Generated dynamically by app.js -->
+                </tr>
+              </thead>
+              <tbody id="comparison-table-body">
+                <!-- Generated dynamically by app.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Desk Modal -->
+  <div class="modal fade" id="adminDeskModal" tabindex="-1" aria-labelledby="adminDeskModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title font-heading" id="adminDeskModalLabel"><i class="fas fa-user-cog text-gold me-2"></i> Client Inquiries Desk</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Bootstrap Tabs -->
+          <ul class="nav nav-tabs mb-3" id="adminTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="inquiries-tab" data-bs-toggle="tab" data-bs-target="#inquiries-pane" type="button" role="tab" aria-controls="inquiries-pane" aria-selected="true"><i class="fas fa-envelope-open-text me-1"></i> Client Inquiries</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="properties-tab" data-bs-toggle="tab" data-bs-target="#properties-pane" type="button" role="tab" aria-controls="properties-pane" aria-selected="false" onclick="renderAdminProperties()"><i class="fas fa-home me-1"></i> Manage Properties</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="content-tab" data-bs-toggle="tab" data-bs-target="#content-pane" type="button" role="tab" aria-controls="content-pane" aria-selected="false" onclick="renderAdminContent()"><i class="fas fa-edit me-1"></i> Edit Website Content</button>
+            </li>
+          </ul>
+          
+          <div class="tab-content" id="adminTabContent">
+            <!-- INQUIRIES PANE -->
+            <div class="tab-pane fade show active" id="inquiries-pane" role="tabpanel" aria-labelledby="inquiries-tab">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-muted"><span id="admin-inquiry-count" class="fw-bold text-gold">0</span> inquiries received</span>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-outline-danger btn-xs" onclick="clearAllInquiries()">Clear All</button>
+                  <button class="btn btn-gold btn-xs" onclick="exportInquiriesCSV()"><i class="fas fa-file-csv me-1"></i> Export CSV</button>
+                </div>
+              </div>
+              <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
+                <table class="table table-striped align-middle">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Client</th>
+                      <th>Property / Subject</th>
+                      <th>Message</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="admin-inquiries-table-body">
+                    <!-- Populated dynamically -->
+                  </tbody>
+                </table>
+              </div>
+              <div id="admin-empty-state" class="text-center py-5 d-none">
+                <i class="fas fa-inbox fa-3x text-muted mb-3"></i>
+                <h5 class="text-secondary">No inquiries logged yet</h5>
+                <p class="text-muted">New submissions from contact forms will appear here.</p>
+              </div>
+            </div>
+            
+            <!-- PROPERTIES PANE -->
+            <div class="tab-pane fade" id="properties-pane" role="tabpanel" aria-labelledby="properties-tab">
+              <!-- List View -->
+              <div id="property-list-container">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="text-muted"><span id="admin-property-count" class="fw-bold text-gold">0</span> properties in catalog</span>
+                  <button class="btn btn-gold btn-xs" onclick="showPropertyForm()"><i class="fas fa-plus me-1"></i> Add Property</button>
+                </div>
+                <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
+                  <table class="table table-striped align-middle">
+                    <thead>
+                      <tr>
+                        <th>Property</th>
+                        <th>Location</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody id="admin-properties-table-body">
+                      <!-- Populated dynamically by app.js -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              
+              <!-- Form View (Add/Edit) -->
+              <div id="property-form-container" class="d-none border p-3 rounded" style="background-color: var(--bg-secondary); border-color: var(--border-color) !important;">
+                <h5 id="property-form-title" class="mb-3 font-heading text-gold">Add New Property</h5>
+                <form id="adminPropertyForm" onsubmit="handlePropertyFormSubmit(event)">
+                  <input type="hidden" id="edit-property-id">
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="prop-title" class="form-label text-secondary" style="font-size:0.85rem;">Property Title</label>
+                      <input type="text" id="prop-title" class="form-control form-control-sm" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="prop-location" class="form-label text-secondary" style="font-size:0.85rem;">Location</label>
+                      <input type="text" id="prop-location" class="form-control form-control-sm" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="prop-price" class="form-label text-secondary" style="font-size:0.85rem;">Price Display Label (e.g. ₹4,850,000 or ₹4,500 / mo)</label>
+                      <input type="text" id="prop-price" class="form-control form-control-sm" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="prop-numeric-price" class="form-label text-secondary" style="font-size:0.85rem;">Numeric Price (for filtering, e.g. 4850000)</label>
+                      <input type="number" id="prop-numeric-price" class="form-control form-control-sm" required>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="prop-type" class="form-label text-secondary" style="font-size:0.85rem;">Property Type</label>
+                      <select id="prop-type" class="form-select form-select-sm">
+                        <option value="Luxury Homes">Luxury Homes</option>
+                        <option value="Residential">Residential</option>
+                        <option value="Commercial">Commercial</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="prop-status" class="form-label text-secondary" style="font-size:0.85rem;">Listing Status</label>
+                      <select id="prop-status" class="form-select form-select-sm">
+                        <option value="Buy">For Sale (Buy)</option>
+                        <option value="Rent">For Rent (Rent)</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-label text-secondary" style="font-size:0.85rem;">Photo Source</label>
+                      <div class="d-flex gap-2 mb-2">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="photoSource" id="sourcePreset" value="preset" checked onchange="togglePhotoSource()">
+                          <label class="form-check-label" for="sourcePreset" style="font-size:0.8rem; cursor:pointer;">Preset</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="photoSource" id="sourceUpload" value="upload" onchange="togglePhotoSource()">
+                          <label class="form-check-label" for="sourceUpload" style="font-size:0.8rem; cursor:pointer;">Upload File</label>
+                        </div>
+                      </div>
+                      <!-- Preset dropdown -->
+                      <select id="prop-preset-image" class="form-select form-select-sm">
+                        <option value="assets/images/prop_oceanfront.png">Oceanfront Penthouse Image</option>
+                        <option value="assets/images/prop_mansion.png">Modernist Mansion Image</option>
+                        <option value="assets/images/prop_townhouse.png">Townhouse Image</option>
+                        <option value="assets/images/prop_estate.png">French Riviera Estate Image</option>
+                      </select>
+                      <!-- Upload file control -->
+                      <input type="file" id="prop-upload-image" class="form-control form-control-sm d-none" accept="image/*" onchange="handleImageUpload(event)">
+                      <!-- Hidden field for base64 data -->
+                      <input type="hidden" id="prop-custom-image-base64">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="prop-beds" class="form-label text-secondary" style="font-size:0.85rem;">Bedrooms</label>
+                      <input type="number" id="prop-beds" class="form-control form-control-sm" required>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="prop-baths" class="form-label text-secondary" style="font-size:0.85rem;">Bathrooms</label>
+                      <input type="number" id="prop-baths" step="0.5" class="form-control form-control-sm" required>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="prop-sqft" class="form-label text-secondary" style="font-size:0.85rem;">Area (Sq Ft)</label>
+                      <input type="number" id="prop-sqft" class="form-control form-control-sm" required>
+                    </div>
+                    <div class="col-12">
+                      <label for="prop-desc" class="form-label text-secondary" style="font-size:0.85rem;">Description</label>
+                      <textarea id="prop-desc" class="form-control form-control-sm" rows="3" required></textarea>
+                    </div>
+                    <div class="col-12 d-flex gap-2 justify-content-end">
+                      <button type="button" class="btn btn-secondary btn-sm" onclick="hidePropertyForm()">Cancel</button>
+                      <button type="submit" class="btn btn-gold btn-sm">Save Property</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            
+            <!-- CONTENT PANE -->
+            <div class="tab-pane fade" id="content-pane" role="tabpanel" aria-labelledby="content-tab">
+              <form id="adminContentForm" onsubmit="handleContentFormSubmit(event)">
+                <div class="accordion accordion-flush" id="contentAccordion">
+                  
+                  <!-- Accordion Item 1: General & Brand -->
+                  <div class="accordion-item" style="background-color: var(--bg-secondary); border-color: var(--border-color) !important;">
+                    <h2 class="accordion-header" id="headingGeneral">
+                      <button class="accordion-button collapsed font-heading text-gold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneral" aria-expanded="false" aria-controls="collapseGeneral" style="background-color: var(--bg-card); color: var(--gold); border-bottom: 1px solid var(--border-color);">
+                        <i class="fas fa-id-card me-2"></i> General & Brand Details
+                      </button>
+                    </h2>
+                    <div id="collapseGeneral" class="accordion-collapse collapse" aria-labelledby="headingGeneral" data-bs-parent="#contentAccordion">
+                      <div class="accordion-body" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+                        <div class="row g-3">
+                          <div class="col-md-6">
+                            <label for="edit-brand-name" class="form-label text-secondary" style="font-size:0.85rem;">Brand Name</label>
+                            <input type="text" id="edit-brand-name" class="form-control form-control-sm" required>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="edit-contact-phone" class="form-label text-secondary" style="font-size:0.85rem;">Phone Number</label>
+                            <input type="text" id="edit-contact-phone" class="form-control form-control-sm" required>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="edit-contact-email" class="form-label text-secondary" style="font-size:0.85rem;">Email Address</label>
+                            <input type="email" id="edit-contact-email" class="form-control form-control-sm" required>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="edit-whatsapp-phone" class="form-label text-secondary" style="font-size:0.85rem;">WhatsApp Number/ID (e.g. 13055550199)</label>
+                            <input type="text" id="edit-whatsapp-phone" class="form-control form-control-sm" required>
+                          </div>
+                          <div class="col-12">
+                            <label for="edit-contact-address" class="form-label text-secondary" style="font-size:0.85rem;">Office Address</label>
+                            <input type="text" id="edit-contact-address" class="form-control form-control-sm" required>
+                          </div>
+                          <div class="col-12">
+                            <label for="edit-google-maps-url" class="form-label text-secondary" style="font-size:0.85rem;">Google Maps Embed Iframe Src URL</label>
+                            <textarea id="edit-google-maps-url" class="form-control form-control-sm" rows="3" required></textarea>
+                          </div>
+                          <div class="col-12">
+                            <label for="edit-google-maps-business-link" class="form-label text-secondary" style="font-size:0.85rem;">Google Maps Business URL (Leaves review section blank/hidden if empty)</label>
+                            <input type="url" id="edit-google-maps-business-link" class="form-control form-control-sm" placeholder="e.g. https://maps.app.goo.gl/... or https://google.com/maps/place/...">
+                          </div>
+                          <div class="col-12">
+                            <label for="edit-footer-desc" class="form-label text-secondary" style="font-size:0.85rem;">Footer Description</label>
+                            <textarea id="edit-footer-desc" class="form-control form-control-sm" rows="3" required></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Accordion Item 2: Hero Section -->
+                  <div class="accordion-item" style="background-color: var(--bg-secondary); border-color: var(--border-color) !important;">
+                    <h2 class="accordion-header" id="headingHero">
+                      <button class="accordion-button collapsed font-heading text-gold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHero" aria-expanded="false" aria-controls="collapseHero" style="background-color: var(--bg-card); color: var(--gold); border-bottom: 1px solid var(--border-color);">
+                        <i class="fas fa-image me-2"></i> Hero Section
+                      </button>
+                    </h2>
+                    <div id="collapseHero" class="accordion-collapse collapse" aria-labelledby="headingHero" data-bs-parent="#contentAccordion">
+                      <div class="accordion-body" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+                        <div class="row g-3">
+                          <div class="col-12">
+                            <label for="edit-hero-title" class="form-label text-secondary" style="font-size:0.85rem;">Hero Heading (Use HTML span for gold word e.g. Find Your &lt;span&gt;Dream&lt;/span&gt; Property)</label>
+                            <input type="text" id="edit-hero-title" class="form-control form-control-sm" required>
+                          </div>
+                          <div class="col-12">
+                            <label for="edit-hero-subtitle" class="form-label text-secondary" style="font-size:0.85rem;">Hero Subheading</label>
+                            <textarea id="edit-hero-subtitle" class="form-control form-control-sm" rows="3" required></textarea>
+                          </div>
+                          <div class="col-12">
+                            <label class="form-label text-secondary" style="font-size:0.85rem;">Hero Background Image Source</label>
+                            <div class="d-flex gap-2 mb-2">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="heroBgSource" id="heroBgPreset" value="preset" checked onchange="toggleHeroBgSource()">
+                                <label class="form-check-label" for="heroBgPreset" style="font-size:0.8rem; cursor:pointer;">Preset</label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="heroBgSource" id="heroBgUpload" value="upload" onchange="toggleHeroBgSource()">
+                                <label class="form-check-label" for="heroBgUpload" style="font-size:0.8rem; cursor:pointer;">Upload File</label>
+                              </div>
+                            </div>
+                            <select id="edit-hero-preset-img" class="form-select form-select-sm">
+                              <option value="assets/images/hero_background.png">Default Hero Sunset Villa</option>
+                              <option value="assets/images/prop_oceanfront.png">Oceanfront Penthouse</option>
+                              <option value="assets/images/prop_mansion.png">Modernist Mansion</option>
+                              <option value="assets/images/prop_estate.png">French Riviera Estate</option>
+                            </select>
+                            <input type="file" id="edit-hero-upload-img" class="form-control form-control-sm d-none" accept="image/*" onchange="handleHeroImageUpload(event)">
+                            <input type="hidden" id="edit-hero-custom-img-base64">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Accordion Item 3: About Us & Stats -->
+                  <div class="accordion-item" style="background-color: var(--bg-secondary); border-color: var(--border-color) !important;">
+                    <h2 class="accordion-header" id="headingAbout">
+                      <button class="accordion-button collapsed font-heading text-gold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAbout" aria-expanded="false" aria-controls="collapseAbout" style="background-color: var(--bg-card); color: var(--gold); border-bottom: 1px solid var(--border-color);">
+                        <i class="fas fa-building me-2"></i> About Us & Stats
+                      </button>
+                    </h2>
+                    <div id="collapseAbout" class="accordion-collapse collapse" aria-labelledby="headingAbout" data-bs-parent="#contentAccordion">
+                      <div class="accordion-body" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+                        <div class="row g-3">
+                          <div class="col-md-6">
+                            <label for="edit-about-pre-title" class="form-label text-secondary" style="font-size:0.85rem;">About Pre-title</label>
+                            <input type="text" id="edit-about-pre-title" class="form-control form-control-sm" required>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="edit-about-title" class="form-label text-secondary" style="font-size:0.85rem;">About Main Title</label>
+                            <input type="text" id="edit-about-title" class="form-control form-control-sm" required>
+                          </div>
+                          <div class="col-12">
+                            <label for="edit-about-lead" class="form-label text-secondary" style="font-size:0.85rem;">About Lead Paragraph</label>
+                            <textarea id="edit-about-lead" class="form-control form-control-sm" rows="3" required></textarea>
+                          </div>
+                          <div class="col-12">
+                            <label for="edit-about-desc" class="form-label text-secondary" style="font-size:0.85rem;">About Body Description</label>
+                            <textarea id="edit-about-desc" class="form-control form-control-sm" rows="4" required></textarea>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="edit-about-years" class="form-label text-secondary" style="font-size:0.85rem;">Experience Years Badge Text (e.g. 15+)</label>
+                            <input type="text" id="edit-about-years" class="form-control form-control-sm" required>
+                          </div>
+                          <div class="col-md-6">
+                            <label class="form-label text-secondary" style="font-size:0.85rem;">About Section Image</label>
+                            <div class="d-flex gap-2 mb-2">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="aboutImgSource" id="aboutImgPreset" value="preset" checked onchange="toggleAboutImgSource()">
+                                <label class="form-check-label" for="aboutImgPreset" style="font-size:0.8rem; cursor:pointer;">Preset</label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="aboutImgSource" id="aboutImgUpload" value="upload" onchange="toggleAboutImgSource()">
+                                <label class="form-check-label" for="aboutImgUpload" style="font-size:0.8rem; cursor:pointer;">Upload File</label>
+                              </div>
+                            </div>
+                            <select id="edit-about-preset-img" class="form-select form-select-sm">
+                              <option value="assets/images/hero_background.png">Default Hero Sunset Villa</option>
+                              <option value="assets/images/prop_oceanfront.png">Oceanfront Penthouse</option>
+                              <option value="assets/images/prop_mansion.png">Modernist Mansion</option>
+                              <option value="assets/images/prop_estate.png">French Riviera Estate</option>
+                            </select>
+                            <input type="file" id="edit-about-upload-img" class="form-control form-control-sm d-none" accept="image/*" onchange="handleAboutImageUpload(event)">
+                            <input type="hidden" id="edit-about-custom-img-base64">
+                          </div>
+                          
+                          <div class="col-12 mt-3 mb-1"><h6 class="text-gold font-heading mb-0">Statistics Settings</h6></div>
+                          <div class="col-md-4">
+                            <label for="edit-stat-1-val" class="form-label text-secondary mb-0" style="font-size:0.8rem;">Stat 1 Target Value</label>
+                            <input type="number" id="edit-stat-1-val" class="form-control form-control-sm" required>
+                            <label for="edit-stat-1-lbl" class="form-label text-secondary mt-1 mb-0" style="font-size:0.8rem;">Stat 1 Label</label>
+                            <input type="text" id="edit-stat-1-lbl" class="form-control form-control-sm" required>
+                          </div>
+                          <div class="col-md-4">
+                            <label for="edit-stat-2-val" class="form-label text-secondary mb-0" style="font-size:0.8rem;">Stat 2 Target Value</label>
+                            <input type="number" id="edit-stat-2-val" class="form-control form-control-sm" required>
+                            <label for="edit-stat-2-lbl" class="form-label text-secondary mt-1 mb-0" style="font-size:0.8rem;">Stat 2 Label</label>
+                            <input type="text" id="edit-stat-2-lbl" class="form-control form-control-sm" required>
+                          </div>
+                          <div class="col-md-4">
+                            <label for="edit-stat-3-val" class="form-label text-secondary mb-0" style="font-size:0.8rem;">Stat 3 Target Value</label>
+                            <input type="number" id="edit-stat-3-val" class="form-control form-control-sm" required>
+                            <label for="edit-stat-3-lbl" class="form-label text-secondary mt-1 mb-0" style="font-size:0.8rem;">Stat 3 Label</label>
+                            <input type="text" id="edit-stat-3-lbl" class="form-control form-control-sm" required>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Accordion Item 4: Services Section -->
+                  <div class="accordion-item" style="background-color: var(--bg-secondary); border-color: var(--border-color) !important;">
+                    <h2 class="accordion-header" id="headingServices">
+                      <button class="accordion-button collapsed font-heading text-gold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseServices" aria-expanded="false" aria-controls="collapseServices" style="background-color: var(--bg-card); color: var(--gold); border-bottom: 1px solid var(--border-color);">
+                        <i class="fas fa-hand-holding-usd me-2"></i> Services Section
+                      </button>
+                    </h2>
+                    <div id="collapseServices" class="accordion-collapse collapse" aria-labelledby="headingServices" data-bs-parent="#contentAccordion">
+                      <div class="accordion-body" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+                        <div class="row g-3">
+                          <div class="col-md-6">
+                            <label for="edit-services-pre-title" class="form-label text-secondary" style="font-size:0.85rem;">Services Pre-title</label>
+                            <input type="text" id="edit-services-pre-title" class="form-control form-control-sm" required>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="edit-services-title" class="form-label text-secondary" style="font-size:0.85rem;">Services Main Title</label>
+                            <input type="text" id="edit-services-title" class="form-control form-control-sm" required>
+                          </div>
+                          <div class="col-12">
+                            <label for="edit-services-subtitle" class="form-label text-secondary" style="font-size:0.85rem;">Services Subheading</label>
+                            <textarea id="edit-services-subtitle" class="form-control form-control-sm" rows="2" required></textarea>
+                          </div>
+                          
+                          <div class="col-12 mt-3 mb-1"><h6 class="text-gold font-heading mb-0">Individual Services (6 Cards)</h6></div>
+                          
+                          <div class="col-md-6 border-bottom border-secondary pb-2">
+                            <span class="text-gold fw-semibold" style="font-size:0.8rem;">Service 1 Details</span>
+                            <input type="text" id="edit-serv-1-title" class="form-control form-control-sm mb-1" placeholder="Title" required>
+                            <textarea id="edit-serv-1-desc" class="form-control form-control-sm" rows="2" placeholder="Description" required></textarea>
+                          </div>
+                          <div class="col-md-6 border-bottom border-secondary pb-2">
+                            <span class="text-gold fw-semibold" style="font-size:0.8rem;">Service 2 Details</span>
+                            <input type="text" id="edit-serv-2-title" class="form-control form-control-sm mb-1" placeholder="Title" required>
+                            <textarea id="edit-serv-2-desc" class="form-control form-control-sm" rows="2" placeholder="Description" required></textarea>
+                          </div>
+                          <div class="col-md-6 border-bottom border-secondary pb-2">
+                            <span class="text-gold fw-semibold" style="font-size:0.8rem;">Service 3 Details</span>
+                            <input type="text" id="edit-serv-3-title" class="form-control form-control-sm mb-1" placeholder="Title" required>
+                            <textarea id="edit-serv-3-desc" class="form-control form-control-sm" rows="2" placeholder="Description" required></textarea>
+                          </div>
+                          <div class="col-md-6 border-bottom border-secondary pb-2">
+                            <span class="text-gold fw-semibold" style="font-size:0.8rem;">Service 4 Details</span>
+                            <input type="text" id="edit-serv-4-title" class="form-control form-control-sm mb-1" placeholder="Title" required>
+                            <textarea id="edit-serv-4-desc" class="form-control form-control-sm" rows="2" placeholder="Description" required></textarea>
+                          </div>
+                          <div class="col-md-6 pb-2">
+                            <span class="text-gold fw-semibold" style="font-size:0.8rem;">Service 5 Details</span>
+                            <input type="text" id="edit-serv-5-title" class="form-control form-control-sm mb-1" placeholder="Title" required>
+                            <textarea id="edit-serv-5-desc" class="form-control form-control-sm" rows="2" placeholder="Description" required></textarea>
+                          </div>
+                          <div class="col-md-6 pb-2">
+                            <span class="text-gold fw-semibold" style="font-size:0.8rem;">Service 6 Details</span>
+                            <input type="text" id="edit-serv-6-title" class="form-control form-control-sm mb-1" placeholder="Title" required>
+                            <textarea id="edit-serv-6-desc" class="form-control form-control-sm" rows="2" placeholder="Description" required></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Accordion Item 5: Why Choose Us -->
+                  <div class="accordion-item" style="background-color: var(--bg-secondary); border-color: var(--border-color) !important;">
+                    <h2 class="accordion-header" id="headingWhy">
+                      <button class="accordion-button collapsed font-heading text-gold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWhy" aria-expanded="false" aria-controls="collapseWhy" style="background-color: var(--bg-card); color: var(--gold); border-bottom: 1px solid var(--border-color);">
+                        <i class="fas fa-question-circle me-2"></i> Why Choose Us
+                      </button>
+                    </h2>
+                    <div id="collapseWhy" class="accordion-collapse collapse" aria-labelledby="headingWhy" data-bs-parent="#contentAccordion">
+                      <div class="accordion-body" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+                        <div class="row g-3">
+                          <div class="col-md-6">
+                            <label for="edit-why-pre-title" class="form-label text-secondary" style="font-size:0.85rem;">Why Us Pre-title</label>
+                            <input type="text" id="edit-why-pre-title" class="form-control form-control-sm" required>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="edit-why-title" class="form-label text-secondary" style="font-size:0.85rem;">Why Us Main Title</label>
+                            <input type="text" id="edit-why-title" class="form-control form-control-sm" required>
+                          </div>
+                          <div class="col-12">
+                            <label for="edit-why-desc" class="form-label text-secondary" style="font-size:0.85rem;">Why Us Subheading</label>
+                            <textarea id="edit-why-desc" class="form-control form-control-sm" rows="2" required></textarea>
+                          </div>
+                          <div class="col-12">
+                            <label class="form-label text-secondary" style="font-size:0.85rem;">Why Us Image</label>
+                            <div class="d-flex gap-2 mb-2">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="whyImgSource" id="whyImgPreset" value="preset" checked onchange="toggleWhyImgSource()">
+                                <label class="form-check-label" for="whyImgPreset" style="font-size:0.8rem; cursor:pointer;">Preset</label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="whyImgSource" id="whyImgUpload" value="upload" onchange="toggleWhyImgSource()">
+                                <label class="form-check-label" for="whyImgUpload" style="font-size:0.8rem; cursor:pointer;">Upload File</label>
+                              </div>
+                            </div>
+                            <select id="edit-why-preset-img" class="form-select form-select-sm">
+                              <option value="assets/images/hero_background.png">Default Hero Sunset Villa</option>
+                              <option value="assets/images/prop_oceanfront.png">Oceanfront Penthouse</option>
+                              <option value="assets/images/prop_mansion.png">Modernist Mansion</option>
+                              <option value="assets/images/prop_estate.png">French Riviera Estate</option>
+                            </select>
+                            <input type="file" id="edit-why-upload-img" class="form-control form-control-sm d-none" accept="image/*" onchange="handleWhyImageUpload(event)">
+                            <input type="hidden" id="edit-why-custom-img-base64">
+                          </div>
+                          
+                          <div class="col-12 mt-3 mb-1"><h6 class="text-gold font-heading mb-0">Benefit Cards (4 Cards)</h6></div>
+                          
+                          <div class="col-md-6 border-bottom border-secondary pb-2">
+                            <span class="text-gold fw-semibold" style="font-size:0.75rem;">Benefit 1 Details</span>
+                            <input type="text" id="edit-why-1-title" class="form-control form-control-sm mb-1" placeholder="Title" required>
+                            <textarea id="edit-why-1-desc" class="form-control form-control-sm" rows="2" placeholder="Description" required></textarea>
+                          </div>
+                          <div class="col-md-6 border-bottom border-secondary pb-2">
+                            <span class="text-gold fw-semibold" style="font-size:0.75rem;">Benefit 2 Details</span>
+                            <input type="text" id="edit-why-2-title" class="form-control form-control-sm mb-1" placeholder="Title" required>
+                            <textarea id="edit-why-2-desc" class="form-control form-control-sm" rows="2" placeholder="Description" required></textarea>
+                          </div>
+                          <div class="col-md-6 pb-2">
+                            <span class="text-gold fw-semibold" style="font-size:0.75rem;">Benefit 3 Details</span>
+                            <input type="text" id="edit-why-3-title" class="form-control form-control-sm mb-1" placeholder="Title" required>
+                            <textarea id="edit-why-3-desc" class="form-control form-control-sm" rows="2" placeholder="Description" required></textarea>
+                          </div>
+                          <div class="col-md-6 pb-2">
+                            <span class="text-gold fw-semibold" style="font-size:0.75rem;">Benefit 4 Details</span>
+                            <input type="text" id="edit-why-4-title" class="form-control form-control-sm mb-1" placeholder="Title" required>
+                            <textarea id="edit-why-4-desc" class="form-control form-control-sm" rows="2" placeholder="Description" required></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Accordion Item 6: Testimonials -->
+                  <div class="accordion-item" style="background-color: var(--bg-secondary); border-color: var(--border-color) !important;">
+                    <h2 class="accordion-header" id="headingTestimonials">
+                      <button class="accordion-button collapsed font-heading text-gold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTestimonials" aria-expanded="false" aria-controls="collapseTestimonials" style="background-color: var(--bg-card); color: var(--gold); border-bottom: 1px solid var(--border-color);">
+                        <i class="fas fa-quote-left me-2"></i> Testimonials Section
+                      </button>
+                    </h2>
+                    <div id="collapseTestimonials" class="accordion-collapse collapse" aria-labelledby="headingTestimonials" data-bs-parent="#contentAccordion">
+                      <div class="accordion-body" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+                        <div class="row g-3">
+                          <div class="col-md-6">
+                            <label for="edit-test-pre-title" class="form-label text-secondary" style="font-size:0.85rem;">Testimonials Pre-title</label>
+                            <input type="text" id="edit-test-pre-title" class="form-control form-control-sm" required>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="edit-test-title" class="form-label text-secondary" style="font-size:0.85rem;">Testimonials Main Title</label>
+                            <input type="text" id="edit-test-title" class="form-control form-control-sm" required>
+                          </div>
+                          <div class="col-12">
+                            <label for="edit-test-subtitle" class="form-label text-secondary" style="font-size:0.85rem;">Testimonials Subheading</label>
+                            <textarea id="edit-test-subtitle" class="form-control form-control-sm" rows="2" required></textarea>
+                          </div>
+                          
+                          <div class="col-12 mt-3 mb-1"><h6 class="text-gold font-heading mb-0">Client Testimonials</h6></div>
+                          
+                          <!-- Testimonial 1 -->
+                          <div class="border border-secondary p-3 rounded mb-3" style="background-color: var(--bg-card);">
+                            <span class="text-gold fw-bold" style="font-size:0.8rem;">Testimonial 1</span>
+                            <div class="row g-2 mt-1">
+                              <div class="col-md-6">
+                                <label for="edit-test-1-name" class="form-label text-secondary" style="font-size:0.75rem;">Client Name</label>
+                                <input type="text" id="edit-test-1-name" class="form-control form-control-sm" required>
+                              </div>
+                              <div class="col-md-6">
+                                <label class="form-label text-secondary" style="font-size:0.75rem;">Client Image</label>
+                                <div class="d-flex gap-2 mb-1">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="test1ImgSrc" id="test1Preset" value="preset" checked onchange="toggleTest1ImgSource()">
+                                    <label class="form-check-label" for="test1Preset" style="font-size:0.75rem; cursor:pointer;">Preset</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="test1ImgSrc" id="test1Upload" value="upload" onchange="toggleTest1ImgSource()">
+                                    <label class="form-check-label" for="test1Upload" style="font-size:0.75rem; cursor:pointer;">Upload</label>
+                                  </div>
+                                </div>
+                                <select id="edit-test-1-preset-img" class="form-select form-select-sm">
+                                  <option value="assets/images/agent_1.png">Eleanor Headshot</option>
+                                  <option value="assets/images/agent_2.png">Jameson Headshot</option>
+                                  <option value="assets/images/agent_3.png">Marcus Headshot</option>
+                                </select>
+                                <input type="file" id="edit-test-1-upload-img" class="form-control form-control-sm d-none" accept="image/*" onchange="handleTest1ImageUpload(event)">
+                                <input type="hidden" id="edit-test-1-custom-img-base64">
+                              </div>
+                              <div class="col-12">
+                                <label for="edit-test-1-txt" class="form-label text-secondary" style="font-size:0.75rem;">Review Quote Text</label>
+                                <textarea id="edit-test-1-txt" class="form-control form-control-sm" rows="3" required></textarea>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Testimonial 2 -->
+                          <div class="border border-secondary p-3 rounded" style="background-color: var(--bg-card);">
+                            <span class="text-gold fw-bold" style="font-size:0.8rem;">Testimonial 2</span>
+                            <div class="row g-2 mt-1">
+                              <div class="col-md-6">
+                                <label for="edit-test-2-name" class="form-label text-secondary" style="font-size:0.75rem;">Client Name</label>
+                                <input type="text" id="edit-test-2-name" class="form-control form-control-sm" required>
+                              </div>
+                              <div class="col-md-6">
+                                <label class="form-label text-secondary" style="font-size:0.75rem;">Client Image</label>
+                                <div class="d-flex gap-2 mb-1">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="test2ImgSrc" id="test2Preset" value="preset" checked onchange="toggleTest2ImgSource()">
+                                    <label class="form-check-label" for="test2Preset" style="font-size:0.75rem; cursor:pointer;">Preset</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="test2ImgSrc" id="test2Upload" value="upload" onchange="toggleTest2ImgSource()">
+                                    <label class="form-check-label" for="test2Upload" style="font-size:0.75rem; cursor:pointer;">Upload</label>
+                                  </div>
+                                </div>
+                                <select id="edit-test-2-preset-img" class="form-select form-select-sm">
+                                  <option value="assets/images/agent_2.png">Jameson Headshot</option>
+                                  <option value="assets/images/agent_1.png">Eleanor Headshot</option>
+                                  <option value="assets/images/agent_3.png">Marcus Headshot</option>
+                                </select>
+                                <input type="file" id="edit-test-2-upload-img" class="form-control form-control-sm d-none" accept="image/*" onchange="handleTest2ImageUpload(event)">
+                                <input type="hidden" id="edit-test-2-custom-img-base64">
+                              </div>
+                              <div class="col-12">
+                                <label for="edit-test-2-txt" class="form-label text-secondary" style="font-size:0.75rem;">Review Quote Text</label>
+                                <textarea id="edit-test-2-txt" class="form-control form-control-sm" rows="3" required></textarea>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Accordion Item 7: FAQs Section -->
+                  <div class="accordion-item" style="background-color: var(--bg-secondary); border-color: var(--border-color) !important;">
+                    <h2 class="accordion-header" id="headingFAQs">
+                      <button class="accordion-button collapsed font-heading text-gold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFAQs" aria-expanded="false" aria-controls="collapseFAQs" style="background-color: var(--bg-card); color: var(--gold); border-bottom: 1px solid var(--border-color);">
+                        <i class="fas fa-question me-2"></i> FAQs
+                      </button>
+                    </h2>
+                    <div id="collapseFAQs" class="accordion-collapse collapse" aria-labelledby="headingFAQs" data-bs-parent="#contentAccordion">
+                      <div class="accordion-body" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+                        <div class="row g-3">
+                          <div class="col-md-6">
+                            <label for="edit-faq-pre-title" class="form-label text-secondary" style="font-size:0.85rem;">FAQ Pre-title</label>
+                            <input type="text" id="edit-faq-pre-title" class="form-control form-control-sm" required>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="edit-faq-title" class="form-label text-secondary" style="font-size:0.85rem;">FAQ Main Title</label>
+                            <input type="text" id="edit-faq-title" class="form-control form-control-sm" required>
+                          </div>
+                          <div class="col-12">
+                            <label for="edit-faq-subtitle" class="form-label text-secondary" style="font-size:0.85rem;">FAQ Subheading</label>
+                            <textarea id="edit-faq-subtitle" class="form-control form-control-sm" rows="2" required></textarea>
+                          </div>
+                          
+                          <div class="col-12 mt-3 mb-1"><h6 class="text-gold font-heading mb-0">List of FAQs (4 Questions)</h6></div>
+                          
+                          <div class="col-12 border-bottom border-secondary pb-2 mb-2">
+                            <span class="text-gold fw-semibold" style="font-size:0.75rem;">FAQ 1 Details</span>
+                            <input type="text" id="edit-faq-1-qn" class="form-control form-control-sm mb-1" placeholder="Question text" required>
+                            <textarea id="edit-faq-1-ans" class="form-control form-control-sm" rows="2" placeholder="Answer text" required></textarea>
+                          </div>
+                          <div class="col-12 border-bottom border-secondary pb-2 mb-2">
+                            <span class="text-gold fw-semibold" style="font-size:0.75rem;">FAQ 2 Details</span>
+                            <input type="text" id="edit-faq-2-qn" class="form-control form-control-sm mb-1" placeholder="Question text" required>
+                            <textarea id="edit-faq-2-ans" class="form-control form-control-sm" rows="2" placeholder="Answer text" required></textarea>
+                          </div>
+                          <div class="col-12 border-bottom border-secondary pb-2 mb-2">
+                            <span class="text-gold fw-semibold" style="font-size:0.75rem;">FAQ 3 Details</span>
+                            <input type="text" id="edit-faq-3-qn" class="form-control form-control-sm mb-1" placeholder="Question text" required>
+                            <textarea id="edit-faq-3-ans" class="form-control form-control-sm" rows="2" placeholder="Answer text" required></textarea>
+                          </div>
+                          <div class="col-12 pb-2">
+                            <span class="text-gold fw-semibold" style="font-size:0.75rem;">FAQ 4 Details</span>
+                            <input type="text" id="edit-faq-4-qn" class="form-control form-control-sm mb-1" placeholder="Question text" required>
+                            <textarea id="edit-faq-4-ans" class="form-control form-control-sm" rows="2" placeholder="Answer text" required></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                
+                <div class="col-12 mt-4 d-flex justify-content-end gap-2">
+                  <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-gold btn-sm"><i class="fas fa-save me-1"></i> Save Changes</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Comparison Tray -->
+  <div id="compare-tray" class="compare-tray">
+    <div class="d-flex align-items-center gap-2">
+      <i class="fas fa-balance-scale text-gold"></i>
+      <span class="fw-bold">Compare (<span class="compare-count">0</span>):</span>
+    </div>
+    <div id="compare-tray-list" class="compare-tray-items">
+      <!-- Added items rendered here -->
+    </div>
+    <button id="launch-compare-btn" class="btn btn-gold btn-xs py-1 px-3" style="font-size: 0.8rem;">Compare Now</button>
+  </div>
+
+  <!-- Floating Live Chat Bubble -->
+  <div id="chat-bubble" class="chat-widget-bubble" aria-label="Open Live Chat">
+    <i class="fas fa-comments"></i>
+  </div>
+
+  <!-- Live Chat Drawer -->
+  <div id="chat-drawer" class="chat-widget-drawer">
+    <div class="chat-header">
+      <div class="agent-status">
+        <div class="status-dot"></div>
+        <div>
+          <div class="fw-bold" style="font-size: 0.9rem;">Aurelia Concierge</div>
+          <div style="font-size: 0.7rem; opacity: 0.8;">Active Advisory Desk</div>
+        </div>
+      </div>
+      <button id="chat-close-btn" class="btn-close btn-close-white" aria-label="Close Live Chat"></button>
+    </div>
+    <div id="chat-body" class="chat-body">
+      <div class="chat-msg received">
+        Hello! Welcome to Aurelia Estates. I am your automated luxury concierge. How can we support your property search today?
+      </div>
+      <div class="chat-quick-replies">
+        <button class="chat-quick-btn"><i class="far fa-calendar-alt text-gold me-1"></i> Schedule a Viewing</button>
+        <button class="chat-quick-btn"><i class="fas fa-check-circle text-gold me-1"></i> Property Availability</button>
+        <button class="chat-quick-btn"><i class="fas fa-phone-alt text-gold me-1"></i> Request Callback</button>
+      </div>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="chat-input" placeholder="Type a message...">
+      <button id="chat-send-btn" aria-label="Send Message"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button id="scroll-top" aria-label="Scroll to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ==========================================
+       BOOTSTRAP & APP JS SCRIPTS
+       ========================================== -->
+  <!-- Bootstrap 5 Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom JS -->
+  <script src="js/app.js"></script>
+</body>
+</html>
