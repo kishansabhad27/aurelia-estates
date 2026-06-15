@@ -5,19 +5,19 @@
 
 const defaultSiteContent = {
   brandName: "AURELIA ESTATES",
-  contactPhone: "+91 22 5555 0199",
-  contactEmail: "contact@aureliaestates.in",
-  contactAddress: "Aurelia Tower, Bandra Kurla Complex, Mumbai, Maharashtra 400051, India",
-  whatsappPhone: "919876543210",
-  googleMapsUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.793836706782!2d72.86159677508006!3d19.072813582132717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8ef4a4a9b47%3A0xb36edbe44865f376!2sBandra+Kurla+Complex%2C+Bandra+East%2C+Mumbai%2C+Maharashtra!5e0!3m2!1sen!2sin!4v1717800000000!5m2!1sen!2sin",
-  googleMapsBusinessLink: "https://www.google.com/maps/place/Bandra+Kurla+Complex,+Bandra+East,+Mumbai,+Maharashtra+400051/",
-  footerDesc: "Curating world-class luxury residences, sea-facing penthouses, and private estates in Bandra, Juhu, and Alibaug. Offering certified titles, transparent transactions, and premier mortgage consultation advisory.",
+  contactPhone: "+1 (305) 555-0199",
+  contactEmail: "contact@aureliaestates.com",
+  contactAddress: "800 Brickell Avenue, Suite 1200, Miami, FL 33131, United States",
+  whatsappPhone: "13055550199",
+  googleMapsUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.1895689408643!2d-80.19326162382449!3d25.76431997735398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b69e46a78225%3A0xe54d92eeeb41b777!2s800%20Brickell%20Ave%2C%20Miami%2C%20FL%2033131!5e0!3m2!1sen!2sus!4v1717800000000!5m2!1sen!2sus",
+  googleMapsBusinessLink: "https://www.google.com/maps/place/Google+Miami/@25.76432,-80.193262,17z",
+  footerDesc: "Curating world-class luxury residences, cliffside estates, and penthouses. Offering certified titles, transparent transactions, and premier mortgage consultation advisory.",
   heroTitle: "Find Your <span>Dream</span> Property",
-  heroSubtitle: "Discover our exclusive portfolio of ultra-luxury modernist villas, private penthouses, and breathtaking cliffside estates in India's premier locations.",
+  heroSubtitle: "Discover our exclusive portfolio of ultra-luxury modernist villas, private penthouses, and breathtaking oceanfront estates curated for sophisticated living.",
   heroBgImage: "assets/images/hero_background.png",
   aboutPreTitle: "About Our Agency",
-  aboutTitle: "Defining Luxury Living in the Indian Market",
-  aboutLead: "At Aurelia Estates, we specialize in high-end residential properties, private estates, and luxury investments across India's primary metros.",
+  aboutTitle: "Defining Luxury Living in the Luxury Market",
+  aboutLead: "At Aurelia Estates, we specialize in high-end residential, private estates, and luxury investments across primary global hubs.",
   aboutDesc: "Our mission is to bring bespoke architectural marvels to discerning buyers. With a legacy of luxury advisory, we merge expert negotiations, exclusive off-market listings, and white-glove real estate marketing services under one roof.",
   aboutExpYears: "15+",
   aboutImage: "assets/images/hero_background.png",
@@ -32,7 +32,7 @@ const defaultSiteContent = {
   propSectionSubtitle: "Browse our hand-selected selection of prime luxury properties available for acquisition and lease.",
   servicesPreTitle: "What We Offer",
   servicesTitle: "Our Real Estate Services",
-  servicesSubtitle: "Providing unparalleled white-glove services to buyers, sellers, and property investors in India.",
+  servicesSubtitle: "Providing unparalleled white-glove services to buyers, sellers, and property investors globally.",
   serv1Title: "Property Buying",
   serv1Desc: "Exclusive access to premier curated listings, off-market opportunities, and comprehensive neighborhood inspections.",
   serv2Title: "Property Selling",
@@ -206,77 +206,77 @@ const defaultPropertiesData = [
     title: "The Azure Penthouse",
     price: "₹4,850,000",
     numericPrice: 4850000,
-    location: "Bandra West, Mumbai",
+    location: "South Beach, Miami",
     beds: 4,
     baths: 4.5,
     sqft: 4200,
     type: "Luxury Homes",
     status: "Buy",
     image: "assets/images/prop_oceanfront.png",
-    description: "Suspended in the sky above Mumbai's world-famous Bandra seafront, this iconic penthouse features floor-to-ceiling glass walls, book-matched Calacatta marble flooring, a custom Italian kitchen, and a private wraparound terrace offering views of the shoreline."
+    description: "Suspended in the sky above Miami's world-famous South Beach, this iconic oceanfront penthouse features floor-to-ceiling glass walls, book-matched Calacatta marble flooring, a custom Italian kitchen, and a private wraparound terrace offering views of the shoreline."
   },
   {
     id: 2,
     title: "Elysian Modernist Mansion",
     price: "₹8,900,000",
     numericPrice: 8900000,
-    location: "Juhu, Mumbai",
+    location: "Coral Gables, Florida",
     beds: 6,
     baths: 7,
     sqft: 9800,
     type: "Luxury Homes",
     status: "Buy",
     image: "assets/images/prop_mansion.png",
-    description: "An architectural tour de force, this modernist mansion in exclusive Juhu delivers grand-scale luxury. Highlights include geometric white concrete framing, custom wood detailing, double-height ceilings, a professional chef's kitchen, custom sports car showcase garage, and a resort-style infinity pool."
+    description: "An architectural tour de force, this modernist mansion in exclusive Coral Gables delivers grand-scale luxury. Highlights include geometric white concrete framing, custom wood detailing, double-height ceilings, a professional chef's kitchen, custom sports car showcase garage, and a resort-style infinity pool."
   },
   {
     id: 3,
     title: "Aurelia City Penthouse",
     price: "₹8,500 / mo",
     numericPrice: 8500,
-    location: "BKC, Mumbai",
+    location: "Brickell, Miami",
     beds: 3,
     baths: 3.5,
     sqft: 2800,
     type: "Luxury Homes",
     status: "Rent",
     image: "assets/images/prop_oceanfront.png",
-    description: "This premium high-rise penthouse in Bandra Kurla Complex features stunning skyline panoramas, modern furniture, automated lighting, double height glazing, and top-tier amenities including spa access, private valet, and concierge desk."
+    description: "This premium high-rise penthouse in Brickell features stunning skyline panoramas, modern furniture, automated lighting, double height glazing, and top-tier amenities including spa access, private valet, and concierge desk."
   },
   {
     id: 4,
     title: "Villa d'Azur Estate",
     price: "₹12,500,000",
     numericPrice: 12500000,
-    location: "Alibaug, Maharashtra",
+    location: "Nice, French Riviera",
     beds: 5,
     baths: 5,
     sqft: 6100,
     type: "Luxury Homes",
     status: "Buy",
     image: "assets/images/prop_estate.png",
-    description: "Nestled on a scenic beachfront in Alibaug, this classic luxury estate is a masterpiece of timeless design. Features include hand-dressed stone walls, lush gardens of lavender, infinity-edge pool, and sun-drenched terraced balconies."
+    description: "Nestled on a cliffside overlooking the Mediterranean, this classic French Riviera estate is a masterpiece of timeless design. Features include hand-dressed stone walls, lush gardens of lavender, infinity-edge pool, and sun-drenched terraced balconies."
   },
   {
     id: 5,
-    title: "Worli Heights Townhouse",
+    title: "Brickell Heights Townhouse",
     price: "₹4,500 / mo",
     numericPrice: 4500,
-    location: "Worli, Mumbai",
+    location: "Brickell, Miami",
     beds: 3,
     baths: 3.5,
     sqft: 2600,
     type: "Residential",
     status: "Rent",
     image: "assets/images/prop_townhouse.png",
-    description: "Located in the heart of Worli, Mumbai's premier residential and business hub, this contemporary townhouse boasts floor-to-ceiling glass panels, natural light throughout, a designer kitchen with state-of-the-art appliances, and a cozy private garden balcony."
+    description: "Located in the heart of Miami's financial and fashion hub, this contemporary townhouse boasts floor-to-ceiling glass panels, natural light throughout, a designer kitchen with state-of-the-art appliances, and a cozy private garden balcony."
   },
   {
     id: 6,
     title: "Prime Commercial Plaza",
     price: "₹15,000,000",
     numericPrice: 15000000,
-    location: "Lutyens, New Delhi",
+    location: "Downtown Miami",
     beds: 0,
     baths: 8,
     sqft: 15000,
@@ -293,16 +293,23 @@ function loadPropertiesFromStorage() {
   const stored = localStorage.getItem("properties");
   if (stored) {
     propertiesData = JSON.parse(stored);
-    // Migration check: Reset to defaults if stored properties use USD ($) symbols or are Miami/US-based
+    // Migration check: Reset to defaults if stored properties use USD ($) symbols instead of INR (₹)
     const containsUSD = propertiesData.some(p => p.price && p.price.includes("$"));
-    const containsMiami = propertiesData.some(p => p.location && (p.location.includes("Miami") || p.location.includes("Florida") || p.location.includes("Riviera")));
-    if (containsUSD || containsMiami) {
-      console.log("Migrating properties storage from USD/US defaults to Indian default catalog...");
-      propertiesData = [...defaultPropertiesData];
+    if (containsUSD) {
+      console.log("Migrating properties storage from USD to INR default catalog...");
+      if (window.customSiteConfig && window.customSiteConfig.properties) {
+        propertiesData = [...window.customSiteConfig.properties];
+      } else {
+        propertiesData = [...defaultPropertiesData];
+      }
       localStorage.setItem("properties", JSON.stringify(propertiesData));
     }
   } else {
-    propertiesData = [...defaultPropertiesData];
+    if (window.customSiteConfig && window.customSiteConfig.properties) {
+      propertiesData = [...window.customSiteConfig.properties];
+    } else {
+      propertiesData = [...defaultPropertiesData];
+    }
     localStorage.setItem("properties", JSON.stringify(propertiesData));
   }
 }
@@ -1186,14 +1193,14 @@ window.handleImageUpload = function(event) {
    14. DYNAMIC WEBSITE CONTENT EDITOR (CMS)
    ========================================================================== */
 window.loadSiteContent = function() {
-  let content = JSON.parse(localStorage.getItem("siteContent"));
-  
-  // Migration check: Reset to defaults if stored content is Miami/US-based
-  if (content && content.contactAddress && (content.contactAddress.includes("Miami") || content.contactAddress.includes("Brickell"))) {
-    console.log("Migrating site content from Miami/US defaults to Indian defaults...");
-    content = defaultSiteContent;
+  let content = null;
+  const stored = localStorage.getItem("siteContent");
+  if (stored) {
+    content = JSON.parse(stored);
+  } else if (window.customSiteConfig && window.customSiteConfig.siteContent) {
+    content = window.customSiteConfig.siteContent;
     localStorage.setItem("siteContent", JSON.stringify(content));
-  } else if (!content) {
+  } else {
     content = defaultSiteContent;
   }
   
@@ -1826,5 +1833,38 @@ function initScrollReveal() {
   }, observerOptions);
   
   animatedElements.forEach(el => observer.observe(el));
+}
+
+/* ==========================================================================
+   15. EXPORT CONFIGURATION SYSTEM
+   ========================================================================== */
+window.exportSiteConfig = function() {
+  const siteContent = JSON.parse(localStorage.getItem("siteContent")) || defaultSiteContent;
+  const properties = JSON.parse(localStorage.getItem("properties")) || defaultPropertiesData;
+
+  const configObj = {
+    siteContent: siteContent,
+    properties: properties
+  };
+
+  const fileContent = `/**
+ * Aurelia Estates - Custom Configuration Fallback
+ * 
+ * Generated on: ${new Date().toLocaleString()}
+ */
+window.customSiteConfig = ${JSON.stringify(configObj, null, 2)};
+`;
+
+  const blob = new Blob([fileContent], { type: "application/javascript" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "config.js";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  URL.revokeObjectURL(url);
+  
+  alert("Configuration file (config.js) generated and downloaded! Please save/replace this file in the 'js/' folder of your project, then commit and push to GitHub.");
 }
 
